@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>logik</title>
+    
+    <style>
+      #root {
+        background-color: fff;
+        color: black;
+        font-size: 2em;
+        height: 100vh;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <input type="text" placeholder="username" id="usernameInput"/>
+      <input type="password" placeholder="password" id="passwordInput"/>
+      <button onclick="onlogin()">LOGIN</button>
+      <br/>
+    <h1 id="admin">anda admin</h1>
+    <h1 id="basic">kapan ngecamp bro!?</h1>
+    </div>
+    
+    <script type="application/javascript">
+    let usernameInput = document.getElementById('usernameInput')
+    let passwordInput = document.getElementById('passwordInput')
+    let admin = document.getElementById('admin')
+    let basic = document.getElementById('basic')
+    
+    admin.style.display="none"
+    basic.style.display="none"
+    
+      function onlogin() {
+        console.log('klik tombolnya')
+        console.log(usernameInput.value)
+        console.log(passwordInput.value)
+        
+        
+        if(usernameInput.value == "bagas" && passwordInput.value == "bagas123") {
+          alert('anda adalah admin wkwkw')
+          basic.style.display="none"
+          admin.style.display="block"
+        }else {
+        alert('anda Tampan sumpah')
+        admin.style.display="none"
+        basic.style.display="block"
+        }
+      }
+    </script>
+  </body>
+</html>
